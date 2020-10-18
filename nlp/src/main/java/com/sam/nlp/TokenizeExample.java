@@ -10,13 +10,13 @@ public class TokenizeExample {
     public static void main(String[] args) {
         StanfordCoreNLP stanfordCoreNLP = Pipeline.getPipleline();
 
-        String text = "Hey! This is Sam Li";
+        String text = "Hey,This is Sam Li";
 
         CoreDocument coreDocument = new CoreDocument(text);
         stanfordCoreNLP.annotate(coreDocument);
 
         List<CoreLabel> coreLabelList = coreDocument.tokens();
-        
+
         for (CoreLabel coreLabel : coreLabelList) {
             System.out.println(coreLabel.originalText());
         }
