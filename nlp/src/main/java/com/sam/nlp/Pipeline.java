@@ -7,7 +7,7 @@ import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 public class Pipeline {
 
     private static Properties properties;
-    private static String propertiesName = "tokenize, ssplit";
+    private static String propertiesName = "tokenize, ssplit, pos";
     private static StanfordCoreNLP stanfordCoreNLP;
 
     private Pipeline() {
