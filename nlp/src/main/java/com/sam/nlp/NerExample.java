@@ -24,7 +24,12 @@ public class NerExample {
 
             String ner = coreLabel.get(CoreAnnotations.NamedEntityTagAnnotation.class);
 
-            System.out.println(coreLabel.originalText() + " = " + ner);
+            // System.out.println(coreLabel.originalText() + " = " + ner);
+            if ("O".equals(ner)) {
+                System.out.println(ner);
+            } else {
+                System.out.println(coreLabel.originalText() + " = " + ner);
+            }
         }
 
     }
